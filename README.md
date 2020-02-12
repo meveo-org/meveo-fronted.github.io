@@ -5,9 +5,7 @@ meveo frontend site
 ## Meveo components and their demo page
 Each component (for instance mv-breadcrumbs) is a github repository of the meveo-org organization with Github pages activated, served from master branch.
 
-So that the demo page can be accessed by its name (typically breadcrumbs.meveo.org) we need to :
-- in meveo.org domain DNS settings : add a CNAME record  (with name breadcrumbs) is added to the meveo.org domain.
-- in mv-breadcrumbs github repository settings, serve the github page with a custom domain (breadcrumbs.meveo.org)
+So that the demo page can be accessed by its name (typically breadcrumbs.meveo.org) we need to go to the mv-breadcrumbs github repository settings, serve the github page with a custom domain (breadcrumbs.meveo.org). Since the meveo.org domain as a wildcard CNAME record *.meveo.org that point to meveo-org.github.io. the subdomain should work immediatly
 
 The demo page is the index.html page found in the root directory of the master branch.
 
