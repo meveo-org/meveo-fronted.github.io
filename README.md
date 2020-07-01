@@ -13,6 +13,24 @@ in order to serve over internet the files (js, css,...) stored in the webcompone
 so for instance to insert the meveo-theme.css stylesheet wichi is located on the css directory of the master branch of the mv-dependencies repository of the meveo-org organisation we insert:
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meveo-org/mv-theme@master/css/meveo-theme.css" /> 
+    
+or add the components as submodules to the project, i.e.
+
+    git submodule add https://github.com/meveo-org/mv-dependencies.git src/webapp/web_modules/mv-dependencies
+
+    git submodule add https://github.com/meveo-org/mv-modules.git src/webapp/web_modules/mv-modules
+
+    git submodule add https://github.com/meveo-org/mv-theme.git src/webapp/web_modules/mv-theme
+
+    git submodule add https://github.com/meveo-org/mv-main.git src/webapp/web_modules/mv-main
+
+    git submodule add https://github.com/meveo-org/mv-menu-panel.git src/webapp/web_modules/mv-menu-panel
+
+    git submodule add https://github.com/meveo-org/mv-header.git src/webapp/web_modules/mv-header
+
+    git submodule add https://github.com/meveo-org/mv-footer.git src/webapp/web_modules/mv-footer
+    
+Note that in this example, the components will be placed in `src/webapp/web_modules`
 
 since the demo pages are not themselves served by meveo (for now...) but by github, we have to manually take care of the browser that dont know what are ES-modules or other related features, so it is recommended to include [es-module-shim](https://github.com/guybedford/es-module-shims) that we forked in [mv-dependencies repo](https://github.com/meveo-org/mv-dependencies/tree/master/es-module-shims) and should be (in the minimified form) included as
 
