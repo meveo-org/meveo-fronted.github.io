@@ -127,6 +127,13 @@ customElements.define("list-SocialAccount", ListSocialAccount);
 
 Since we modified the class and component name, update AppDashboard by replacing the entity codes and Entrypoint accordingly.
 
+Download the json schema files for each custoim entity from meveo either using the file explorer and going to `/git/Meveo/src/main/java/custom/entities` or by cloning this repo first 
+```
+git clone http://meveo.admin:meveo@localhost:8080/meveo/git/Meveo meveo-git
+```
+then taking them (`SOCIAL_ACCOUNT.json` and `TEL_IMPORT.json`) from `src/main/java/custom/entities`
 
+put those two json schema files in /model/ and delte Demo.js and DemoChild.js
 
+update index.htm to import those model instead of Demo and DemoChild
 
